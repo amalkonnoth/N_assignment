@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				<p>{{msg}}<p/>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+	<br>
+<center><h1> welcome {{username}}<h1></center>
+{% endblock %}
